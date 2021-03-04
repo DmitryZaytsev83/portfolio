@@ -1,2 +1,34 @@
-<!--<p>games works!</p>-->
-<p>games under construction!</p>
+<h2 class="title">Find an extra coin</h2>
+<h3 class="round">Round {{round}}</h3>
+<div class="game">
+  <div class="left">
+    <div class="left-container">
+      <div class="left-game-field"
+           [style]="{width: fieldXSize + 'px', height: fieldYSize + 'px'}">
+        <img class="face" *ngFor="let face of facesToLeft;let last = last"
+             [style]="{left: face.x + 'px', top: face.y + 'px'}"
+             [ngClass]="{'last-child': last}"
+             (click)="checkRound($event.target)"
+             [width]="faceSize"
+             [height]="faceSize"
+             src="../../assets/Smile_for_game.svg"
+             alt="smile">
+      </div>
+      <div class="left-caption">{{facesToLeft.length}} pieces</div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right-container">
+      <div class="right-game-field"
+           [style]="{width: fieldXSize + 'px', height: fieldYSize + 'px'}">
+        <img class="face" *ngFor="let face of facesToRight;"
+             [style]="{left: face.x + 'px', top: face.y + 'px'}"
+             [width]="faceSize"
+             [height]="faceSize"
+             src="../../assets/Smile_for_game.svg"
+             alt="smile">
+      </div>
+      <div class="right-caption">{{facesToRight.length}} pieces</div>
+    </div>
+  </div>
+</div>

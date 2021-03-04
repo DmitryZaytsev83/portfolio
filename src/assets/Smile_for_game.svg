@@ -1,0 +1,48 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <style>.cls-1 {
+      fill: url(#radial-gradient);
+    }
+
+    .cls-2 {
+      fill: url(#radial-gradient-2);
+    }
+
+    .cls-3 {
+      fill: #fff;
+    }
+
+    .cls-4 {
+      fill: none;
+      stroke: #000;
+      stroke-miterlimit: 10;
+    }</style>
+    <radialGradient id="radial-gradient" cx="50" cy="50" r="50"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff0"/>
+      <stop offset="0.42" stop-color="#fffd02"/>
+      <stop offset="0.6" stop-color="#fff607"/>
+      <stop offset="0.74" stop-color="#fee910"/>
+      <stop offset="0.85" stop-color="#fdd81d"/>
+      <stop offset="0.95" stop-color="#fcc12e"/>
+      <stop offset="1" stop-color="#fbb03b"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="50" cy="50" r="50"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </radialGradient>
+  </defs>
+  <circle class="cls-1" cx="50" cy="50" r="50"/>
+  <path class="cls-2"
+        d="M50,1A49,49,0,1,1,1,50,49.05,49.05,0,0,1,50,1m0-1a50,50,0,1,0,50,50A50,50,0,0,0,50,0Z"/>
+  <path class="cls-3"
+        d="M50,86.5A36.48,36.48,0,0,1,14,56a47.47,47.47,0,0,0,72,0A36.48,36.48,0,0,1,50,86.5Z"/>
+  <path
+    d="M85.18,57.64a36,36,0,0,1-70.36,0,48,48,0,0,0,70.36,0m1.56-3.35a47,47,0,0,1-73.48,0,37,37,0,0,0,73.48,0Z"/>
+  <path class="cls-4" d="M19.5,34.5s2-11,10-11"/>
+  <path class="cls-4" d="M39.5,34.5s-2-11-10-11"/>
+  <path class="cls-4" d="M61.5,34.5s2-11,10-11"/>
+  <path class="cls-4" d="M81.5,34.5s-2-11-10-11"/>
+</svg>
