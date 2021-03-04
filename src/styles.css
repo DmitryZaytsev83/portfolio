@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --glass-tint: rgba(0, 128, 255, 0.02);
+  --glass-shadow: rgba(0, 128, 255, 0.2);
+  --glass-red: red;
+  --light-bg: white;
+  --dark-bg: #121224;
+  --light-text-color: midnightblue;
+  --dark-text-color: gainsboro;
+  --accent-color: cornflowerblue;
+  --neutral-gray: #707070;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,73 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.switcher {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.pit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, var(--glass-tint), rgba(70, 70, 70, 0.1), var(--glass-tint));
+  padding: 3px;
+  border-radius: 500px;
+  box-shadow: inset 0 0 2px gray;
+}
+
+.indicators {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case {
+  position: relative;
+  border-radius: 50px;
+  width: 30px;
+  height: 90px;
+  background-color: var(--neutral-gray);
+  transition: background-color 100ms linear;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 3px solid rgba(18, 18, 36, .05);
+  border-radius: 50%;
+  background-color: var(--neutral-gray);
+  transition: top 200ms ease-in-out, background-color 100ms linear;
+}
+
+.control:hover {
+  cursor: pointer;
+}
+
+.position-on {
+  top: 0;
+  transform: translateX(-50%) translateY(-25%);
+}
+
+.position-off {
+  top: 100%;
+  transform: translateX(-50%) translateY(-75%);
+}
+
+.background-color-on {
+  background-color: var(--accent-color);
+}
+
+.color-on {
+  color: var(--accent-color);
+}
+

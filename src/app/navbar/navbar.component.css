@@ -1,0 +1,80 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  font-family: Nunito, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  flex-shrink: 1;
+  max-width: 1650px;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  margin: 1rem 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-shrink: 0;
+  list-style: none;
+  margin-block: unset;
+}
+
+.hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+.show {
+  height: auto;
+  overflow: auto;
+}
+
+.list-vertical {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 0;
+  flex-direction: column;
+}
+
+.menu-button {
+  display: block;
+}
+
+.nav-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.active-link {
+  color: var(--accent-color);
+}
+
+.settings {
+  display: flex;
+  transition: transform 100ms linear;
+}
+
+.settings:hover {
+  cursor: pointer;
+}
+
+.settings:active {
+  transform: scale(.9);
+}

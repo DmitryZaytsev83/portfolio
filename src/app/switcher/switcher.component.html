@@ -1,0 +1,19 @@
+<h4>{{title|titlecase}}</h4>
+<div class="switcher">
+  <div class="pit"
+       [style]="{'height': height * 1.15 + 'px','width': height / 2 + 'px'}">
+    <div class="case"
+         [ngClass]="{'background-color-on': state}"
+         [style]="{'height': height + 'px','width': height / 4 + 'px'}">
+      <div class="control"
+           [style]="{'height': height / 2 + 'px', 'width': height / 2 + 'px'}"
+           (click)="switch()"
+           [ngClass]="{'position-on':state, 'background-color-on':state}">
+      </div>
+    </div>
+  </div>
+  <div class="indicators">
+    <div [ngClass]="{'color-on':state}">{{onWord}}</div>
+    <div>{{offWord}}</div>
+  </div>
+</div>
