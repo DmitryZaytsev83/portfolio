@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
+import {CoinGameService} from '../services/coin-game.service';
 
-interface Face {
+export interface Face {
   x: number;
   y: number;
 }
@@ -8,7 +9,7 @@ interface Face {
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css']
+  styleUrls: ['./games.component.css'],
 })
 export class GamesComponent implements OnInit {
   fieldXSize = 400;
@@ -20,34 +21,25 @@ export class GamesComponent implements OnInit {
   public faceSize = 80;
   public win = false;
 
-  constructor() {
+  constructor(private coinGameService: CoinGameService) {
   }
 
   ngOnInit(): void {
-    this.init();
-  }
-
-  init(): void {
-    this.fillFaces();
-  }
-
-  fillFaces(): void {
-    this.facesToLeft = [];
-    for (let i = 0; i < this.round * this.countPerRound + 1; i++) {
-      this.facesToLeft.push({
-        x: Math.floor(Math.random() * (this.fieldXSize - this.faceSize)),
-        y: Math.floor(Math.random() * (this.fieldYSize - this.faceSize))
-      });
-    }
-    this.facesToRight = this.facesToLeft.filter((e, i) => i !== this.facesToLeft.length - 1);
+    this.initRound();
   }
 
   checkRound(target: EventTarget | null): void {
     if ((target as HTMLElement).classList.contains('last-child')) {
-      this.round++;
+      this.coinGameService.increaseRound();
     } else {
-      this.round = 1;
+      this.coinGameService.resetRound();
     }
-    this.fillFaces();
+    this.initRound();
+  }
+
+  private initRound(): void {
+    this.facesToLeft = this.coinGameService.getFacesToLeft();
+    this.facesToRight = this.coinGameService.getFacesToRight();
+    this.round = this.coinGameService.getRound();
   }
 }
