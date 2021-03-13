@@ -1,2 +1,43 @@
-<!--<p>games works!</p>-->
-<p>games under construction!</p>
+<h2 class="title">Find an extra coin</h2>
+<h3 class="round">Round {{coinGameService.getRound()}}</h3>
+<div class="game">
+  <div class="left">
+    <div class="left-container">
+      <div class="left-game-field"
+           [style]="{
+           width: coinGameService.getFieldXSize() + 'px',
+           height: coinGameService.getFieldYSize() + 'px'}">
+        <img class="face"
+             *ngFor="let face of coinGameService.getFacesToLeft();let last = last"
+             [style]="{left: face.x + 'px', top: face.y + 'px'}"
+             [ngClass]="{'last-child': last}"
+             (click)="checkRound($event.target)"
+             [width]="coinGameService.getFaceSize()"
+             [height]="coinGameService.getFaceSize()"
+             src="../../assets/Smile_for_game.svg"
+             alt="smile">
+      </div>
+      <div class="left-caption">{{coinGameService.getFacesToLeft().length}}
+        pieces
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="right-container">
+      <div class="right-game-field"
+           [style]="{
+           width: coinGameService.getFieldXSize() + 'px',
+           height: coinGameService.getFieldYSize() + 'px'}">
+        <img class="face" *ngFor="let face of coinGameService.getFacesToRight()"
+             [style]="{left: face.x + 'px', top: face.y + 'px'}"
+             [width]="coinGameService.getFaceSize()"
+             [height]="coinGameService.getFaceSize()"
+             src="../../assets/Smile_for_game.svg"
+             alt="smile">
+      </div>
+      <div class="right-caption">{{coinGameService.getFacesToRight().length}}
+        pieces
+      </div>
+    </div>
+  </div>
+</div>

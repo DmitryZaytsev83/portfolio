@@ -38,7 +38,9 @@ export class NavbarComponent implements OnInit {
       return;
     }
     if (offsetWidth < scrollWidth) {
-      this.widthToCollapse = this.widthToCollapse < scrollWidth ? scrollWidth : this.widthToCollapse;
+      this.widthToCollapse = this.widthToCollapse < scrollWidth
+        ? scrollWidth
+        : this.widthToCollapse;
       this.showMenuButton = true;
       this.menuClosed = true;
     } else {

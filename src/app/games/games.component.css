@@ -1,0 +1,37 @@
+.title, .round {
+  text-align: center;
+}
+
+.game {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+}
+
+.left {
+  display: grid;
+  justify-items: end;
+}
+
+.right {
+  display: grid;
+  justify-items: start;
+}
+
+.left-game-field, .right-game-field {
+  border: 1px solid var(--light-text-color);
+  position: relative;
+}
+
+.face {
+  position: absolute;
+}
+
+.left-caption, .right-caption {
+  text-align: center;
+}
+
+
