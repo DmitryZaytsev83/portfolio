@@ -12,7 +12,6 @@ export class CoinGameService {
   private facesToLeft: Face[] = [];
   private facesToRight: Face[] = [];
   private faceSize = 80;
-  private win = false;
 
   constructor() {
     this.fieldXSize = 400;
@@ -57,7 +56,15 @@ export class CoinGameService {
     return this.facesToRight;
   }
 
-  getCountPerRound(): number {
-    return this.countPerRound;
+  public getFaceSize(): number {
+    return this.faceSize;
+  }
+
+  public getFieldXSize(): number {
+    return this.fieldXSize;
+  }
+
+  public getFieldYSize(): number {
+    return this.fieldYSize;
   }
 }

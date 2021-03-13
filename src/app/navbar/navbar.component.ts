@@ -38,7 +38,9 @@ export class NavbarComponent implements OnInit {
       return;
     }
     if (offsetWidth < scrollWidth) {
-      this.widthToCollapse = this.widthToCollapse < scrollWidth ? scrollWidth : this.widthToCollapse;
+      this.widthToCollapse = this.widthToCollapse < scrollWidth
+        ? scrollWidth
+        : this.widthToCollapse;
       this.showMenuButton = true;
       this.menuClosed = true;
     } else {
@@ -53,6 +55,7 @@ export class NavbarComponent implements OnInit {
     if (this.theme === 1) {
       return true;
     }
-    return window.matchMedia('(prefers-color-scheme: light)').matches;
+    return window.matchMedia('(prefers-color-scheme: light)')
+      .matches;
   }
 }
