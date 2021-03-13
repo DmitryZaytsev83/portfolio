@@ -12,6 +12,9 @@ export class ThemeService {
     this.theme = 0;
     this.glass = true;
     this.neon = true;
+    window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', () => {
+      });
   }
 
   getThemeName(): string {
