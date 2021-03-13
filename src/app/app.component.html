@@ -1,5 +1,6 @@
-<div class="wrapper" [ngClass]="{'neon': neon, 'light-theme': theme===1,
-'dark-theme':theme===2}" (resized)="onResized($event)">
+<div class="wrapper" [ngClass]="{'neon': themeService.getNeon(),
+'light-theme':themeService.isLightTheme(),'dark-theme':themeService.isDarkTheme()}"
+     (resized)="onResized($event)">
   <svg class="svg-lines" xmlns="http://www.w3.org/2000/svg"
        [attr.width]="svgWidth+'px'" [attr.height]="svgHeight+'px'"
        [attr.viewBox]="'0 0 ' + svgWidth + ' ' + svgHeight">
@@ -9,24 +10,30 @@
             [attr.d]="line.d"/>
     </g>
   </svg>
-  <main class="main" [ngClass]="{'glass': glass, 'glass-size':glass}">
-    <app-navbar [(show)]="showDrawer" [theme]="theme" class="navbar"></app-navbar>
+  <main class="main" [ngClass]="{'glass': themeService.getGlass()}">
+    <app-navbar [(show)]="showDrawer" class="navbar"></app-navbar>
     <section class="page">
       <router-outlet></router-outlet>
     </section>
   </main>
-  <aside class="right-drawer" [ngClass]="{'glass': glass, 'show': showDrawer}">
+  <aside class="right-drawer"
+         [ngClass]="{'glass': themeService.getGlass(), 'show': showDrawer}">
     <div>
-      <app-triple-switcher title="theme"
-                           onWord="light" offWord="dark" middleWord="auto"
-                           [(state)]="theme"></app-triple-switcher>
+      <app-triple-switcher
+        title="theme" onWord="light" offWord="dark" middleWord="auto"
+        [state]="themeService.getTheme()"
+        (stateChange)="themeService.setTheme($event)">
+      </app-triple-switcher>
     </div>
     <div>
-      <app-switcher [(state)]="glass" [height]="40"
+      <app-switcher [state]="themeService.getGlass()"
+                    (stateChange)="themeService.setGlass($event)"
+                    [height]="40"
                     title="glass"></app-switcher>
     </div>
     <div>
-      <app-switcher [(state)]="neon" [height]="40" title="neon"></app-switcher>
+      <app-switcher (stateChange)="themeService.setNeon($event)" [height]="40"
+                    title="neon"></app-switcher>
     </div>
   </aside>
 </div>

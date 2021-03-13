@@ -1,5 +1,6 @@
-import {Component, ElementRef, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {ResizedEvent} from 'angular-resize-event';
+import {ThemeService} from './services/theme.service';
 
 interface Line {
   [fill: string]: string;
@@ -15,13 +16,13 @@ interface Line {
 
 export class AppComponent {
   title = 'portfolio';
-  glass = true;
-  neon = true;
   showDrawer = false;
   public lines: Line[] = [];
   public svgWidth = 0;
   public svgHeight = 0;
-  theme = 0; // 0-system, 1-light, 2-dark
+
+  constructor(public themeService: ThemeService) {
+  }
 
   onResized(event: ResizedEvent): void {
     this.svgWidth = event.newWidth;

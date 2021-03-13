@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {ResizedEvent} from 'angular-resize-event';
+import {ThemeService} from '../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,6 @@ import {ResizedEvent} from 'angular-resize-event';
 })
 export class NavbarComponent implements OnInit {
   @Input() show = false;
-  @Input() theme = 0;
   @Output() showChange = new EventEmitter<boolean>();
   public links = [
     {link: '/', name: 'home'},
@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   menuClosed = true;
   widthToCollapse = 0;
 
-  constructor() {
+  constructor(public themeService: ThemeService) {
   }
 
   ngOnInit(): void {
@@ -44,15 +44,5 @@ export class NavbarComponent implements OnInit {
     } else {
       this.showMenuButton = false;
     }
-  }
-
-  isLightTheme(): boolean {
-    if (this.theme === 2) {
-      return false;
-    }
-    if (this.theme === 1) {
-      return true;
-    }
-    return window.matchMedia('(prefers-color-scheme: light)').matches;
   }
 }
