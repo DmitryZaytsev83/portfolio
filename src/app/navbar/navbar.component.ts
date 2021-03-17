@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
   @Output() showChange = new EventEmitter<boolean>();
   public links = [
     {link: '/', name: 'home'},
-    {link: '/games', name: 'games'},
-    {link: '/projects', name: 'projects'},
+    {link: '/game', name: 'game'},
+    // {link: '/projects', name: 'projects'},
   ];
   showMenuButton = false;
   menuClosed = true;
