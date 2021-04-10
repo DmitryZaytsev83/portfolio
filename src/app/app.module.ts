@@ -6,13 +6,13 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './pages/home/home.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {CoinGameComponent} from './pages/games/coins/coin-game.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SwitcherComponent} from './components/switcher/switcher.component';
 import {AngularResizedEventModule} from 'angular-resize-event';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { TripleSwitcherComponent } from './components/triple-switcher/triple-switcher.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import {ProjectsComponent} from './pages/projects/projects.component';
+import {TripleSwitcherComponent} from './components/triple-switcher/triple-switcher.component';
+import {SettingsComponent} from './components/settings/settings.component';
+import {ContactComponent} from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularResizedEventModule
+    AngularResizedEventModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
