@@ -11,6 +11,7 @@ import {SwitcherComponent} from './switcher/switcher.component';
 import {AngularResizedEventModule} from 'angular-resize-event';
 import { ProjectsComponent } from './projects/projects.component';
 import { TripleSwitcherComponent } from './triple-switcher/triple-switcher.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TripleSwitcherComponent } from './triple-switcher/triple-switcher.compo
     GamesComponent,
     SwitcherComponent,
     ProjectsComponent,
-    TripleSwitcherComponent
+    TripleSwitcherComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

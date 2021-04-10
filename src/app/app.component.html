@@ -16,24 +16,7 @@
       <router-outlet></router-outlet>
     </section>
   </main>
-  <aside class="right-drawer"
-         [ngClass]="{'glass': themeService.getGlass(), 'show': showDrawer}">
-    <div>
-      <app-triple-switcher
-        title="theme" onWord="light" offWord="dark" middleWord="auto"
-        [state]="themeService.getTheme()"
-        (stateChange)="themeService.setTheme($event)">
-      </app-triple-switcher>
-    </div>
-    <div>
-      <app-switcher [state]="themeService.getGlass()"
-                    (stateChange)="themeService.setGlass($event)"
-                    [height]="40"
-                    title="glass"></app-switcher>
-    </div>
-    <div>
-      <app-switcher (stateChange)="themeService.setNeon($event)" [height]="40"
-                    title="neon"></app-switcher>
-    </div>
-  </aside>
+  <app-settings class="right-drawer"
+                [ngClass]="{'glass': themeService.getGlass(),
+                'show': showDrawer}"></app-settings>
 </div>
