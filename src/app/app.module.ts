@@ -3,24 +3,26 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
-import {NavbarComponent} from './navbar/navbar.component';
-import {GamesComponent} from './games/games.component';
+import {HomeComponent} from './pages/home/home.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {CoinGameComponent} from './pages/games/coins/coin-game.component';
 import {FormsModule} from '@angular/forms';
-import {SwitcherComponent} from './switcher/switcher.component';
+import {SwitcherComponent} from './components/switcher/switcher.component';
 import {AngularResizedEventModule} from 'angular-resize-event';
-import { ProjectsComponent } from './projects/projects.component';
-import { TripleSwitcherComponent } from './triple-switcher/triple-switcher.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { TripleSwitcherComponent } from './components/triple-switcher/triple-switcher.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    GamesComponent,
+    CoinGameComponent,
     SwitcherComponent,
     ProjectsComponent,
-    TripleSwitcherComponent
+    TripleSwitcherComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

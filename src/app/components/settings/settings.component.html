@@ -1,0 +1,14 @@
+<app-triple-switcher
+  title="theme" onWord="light" offWord="dark" middleWord="auto"
+  [state]="themeService.getTheme()"
+  (stateChange)="themeService.setTheme($event)">
+</app-triple-switcher>
+<app-switcher [state]="themeService.getGlass()"
+              (stateChange)="themeService.setGlass($event)"
+              [height]="40"
+              title="glass">
+</app-switcher>
+<app-switcher (stateChange)="themeService.setNeon($event)"
+              [height]="40"
+              title="neon">
+</app-switcher>
