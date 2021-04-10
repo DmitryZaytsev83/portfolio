@@ -25,7 +25,8 @@
     <div class="form-control">
       <fieldset>
         <legend>Message</legend>
-        <textarea class="input-form" formControlName="message"></textarea>
+        <textarea class="input-form" formControlName="message"
+                  placeholder="Write your message here"></textarea>
         <div
           *ngIf="form.get('message')?.invalid
              && form.get('message')?.touched"
@@ -34,7 +35,7 @@
             The field "Message" must be filled
           </small>
           <small *ngIf="form.get('message')?.errors?.minlength">
-            the "Message" field cannot be less than
+            The "Message" field cannot be less than
             {{form.get('message')?.errors?.minlength.requiredLength}}
             characters. Now the number of characters is
             {{form.get('message')?.errors?.minlength.actualLength}}.
