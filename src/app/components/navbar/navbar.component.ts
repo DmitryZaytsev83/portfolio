@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {ResizedEvent} from 'angular-resize-event';
-import {ThemeService} from '../services/theme.service';
+import {ThemeService} from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',

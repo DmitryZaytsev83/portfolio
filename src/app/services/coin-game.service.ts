@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Face} from '../games/games.component';
+import {Face} from '../pages/games/coins/coin-game.component';
 
 @Injectable({
   providedIn: 'root',

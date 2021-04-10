@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CoinGameService} from '../services/coin-game.service';
+import {CoinGameService} from '../../../services/coin-game.service';
 
 export interface Face {
   x: number;
@@ -8,10 +8,10 @@ export interface Face {
 
 @Component({
   selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.css'],
+  templateUrl: './coin-game.component.html',
+  styleUrls: ['./coin-game.component.css'],
 })
-export class GamesComponent implements OnInit {
+export class CoinGameComponent implements OnInit {
 
   constructor(public coinGameService: CoinGameService) {
   }
