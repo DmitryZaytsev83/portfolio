@@ -12,6 +12,7 @@ import {AngularResizedEventModule} from 'angular-resize-event';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { TripleSwitcherComponent } from './components/triple-switcher/triple-switcher.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     SwitcherComponent,
     ProjectsComponent,
     TripleSwitcherComponent,
-    SettingsComponent
+    SettingsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
