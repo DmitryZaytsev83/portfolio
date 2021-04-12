@@ -19,18 +19,14 @@ export class CoinGameService {
     this.countPerRound = 10;
     if (localStorage.getItem('round') !== null) {
       this.round = JSON.parse(localStorage.getItem('round') as string);
-      console.log('round from localstorage');
     } else {
-      console.log('new set round');
       localStorage.setItem('round', '1');
       this.round = JSON.parse(localStorage.getItem('round') as string);
     }
     if (localStorage.getItem('facesToLeft') !== null && localStorage.getItem('facesToRight') !== null) {
-      console.log('from localstorage');
       this.facesToLeft = JSON.parse(localStorage.getItem('facesToLeft') as string);
       this.facesToRight = JSON.parse(localStorage.getItem('facesToRight') as string);
     } else {
-      console.log('new items');
       this.facesToLeft = this.fillFacesToLeft();
       this.facesToRight = this.fillFacesToRight();
     }
