@@ -13,6 +13,7 @@ import {ProjectsComponent} from './pages/projects/projects.component';
 import {TripleSwitcherComponent} from './components/triple-switcher/triple-switcher.component';
 import {SettingsComponent} from './components/settings/settings.component';
 import {ContactComponent} from './pages/contact/contact.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {ContactComponent} from './pages/contact/contact.component';
     AppRoutingModule,
     FormsModule,
     AngularResizedEventModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
