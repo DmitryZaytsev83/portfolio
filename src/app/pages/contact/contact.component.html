@@ -19,6 +19,9 @@
             characters. Now the number of characters is
             {{form.get('email')?.errors?.minlength.actualLength}}.
           </small>
+          <small *ngIf="form.get('email')?.errors?.email">
+            Enter correct email
+          </small>
         </div>
       </fieldset>
     </div>
