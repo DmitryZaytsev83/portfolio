@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   public links = [
     {link: '/', name: 'home'},
     {link: '/game', name: 'game'},
+    {link: '/contacts', name: 'contacts'},
     // {link: '/projects', name: 'projects'},
   ];
   showMenuButton = false;
